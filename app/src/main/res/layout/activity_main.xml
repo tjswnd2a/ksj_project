@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+
+
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@+id/delete"
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_baseline_delete_24"
+            tools:ignore="VectorDrawableCompat" />
+        <ImageView
+            android:layout_gravity="right"
+            android:id="@+id/delete_cancel"
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="EVENT"
+            android:textColor="#ffffff"
+            android:textSize="30dp"></TextView>
+
+    </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:layout_gravity="bottom|right"
+        android:id="@+id/plus"
+        android:layout_width="66dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_baseline_add_circle_24"
+        tools:ignore="VectorDrawableCompat" />
+    </FrameLayout>
+
+</LinearLayout>
